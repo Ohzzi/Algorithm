@@ -29,7 +29,6 @@ bool check(int* arr, int n, int size) {
 
 int main() {
 	int n, m;
-	clock_t start, end;
 
 	std::cin >> n;
 	int* A = new int[n];
@@ -43,8 +42,6 @@ int main() {
 	}
 	std::cout << std::endl;
 
-	start = clock();
-
 	std::sort(A, A + n);
 
 	for (int i = 0; i < m; i++) {
@@ -55,9 +52,6 @@ int main() {
 			std::cout << 0 << std::endl;
 		}
 	}
-
-	end = clock();
-	std::cout << std::endl << end - start << std::endl;
 
 	return 0;
 }

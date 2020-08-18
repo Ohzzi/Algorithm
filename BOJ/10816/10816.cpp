@@ -34,8 +34,6 @@ int main() {
 	}
 	std::cout << std::endl;
 
-	start = clock();
-
 	std::sort(card, card + n);
 
 	for (int i = 0; i < m; i++) {
@@ -43,9 +41,6 @@ int main() {
 		std::cout << result << " ";
 	}
 	std::cout << std::endl << std::endl;
-
-	end = clock();
-	std::cout << end - start << std::endl;
 
 	return 0;
 	

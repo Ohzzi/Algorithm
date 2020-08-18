@@ -16,9 +16,7 @@ public:
 
 int main() {
 	int N, t = 0, count = 0;
-	clock_t start, end;
 	std::cin >> N;
-	start = clock();
 	conference* conf = new conference[N];
 	for (int i = 0; i < N; i++) {
 		std::cin >> conf[i].t_start >> conf[i].t_end;
@@ -31,7 +29,5 @@ int main() {
 			count++;
 		}
 	}
-	end = clock();
 	std::cout << count << std::endl;
-	std::cout << end - start << std::endl;
 }
