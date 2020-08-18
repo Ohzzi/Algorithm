@@ -32,7 +32,6 @@ int main() {
 	for (int i = 0; i < m; i++) {
 		std::cin >> integer[i];
 	}
-	std::cout << std::endl;
 
 	std::sort(card, card + n);
 
@@ -40,8 +39,6 @@ int main() {
 		int result = std::upper_bound(card, card + n, integer[i]) - std::lower_bound(card, card + n, integer[i]);
 		std::cout << result << " ";
 	}
-	std::cout << std::endl << std::endl;
 
 	return 0;
-	
 }
