@@ -10,12 +10,13 @@
 /*출력
 /*M개의 줄에 답을 출력한다. 존재하면 1을, 존재하지 않으면 0을 출력한다.*/
 
-bool check(int* arr, int n, int size) {
+void check(int* arr, int n, int size) {
 	int	left = 0, mid, right = size - 1;
 	while (left <= right) {
 		mid = (left + right) / 2;
 		if (n == arr[mid]) {
-			return true;
+			std::cout << "1\n";
+			return;
 		}
 		else if (n < arr[mid]) {
 			right = mid - 1;
@@ -24,7 +25,8 @@ bool check(int* arr, int n, int size) {
 			left = mid + 1;
 		}
 	}
-	return false;
+	std::cout << "0\n";
+	return;
 }
 
 int main() {
@@ -40,17 +42,11 @@ int main() {
 	for (int i = 0; i < m; i++) {
 		std::cin >> B[i];
 	}
-	std::cout << std::endl;
 
 	std::sort(A, A + n);
 
 	for (int i = 0; i < m; i++) {
-		if (check(A, B[i], n)) {
-			std::cout << 1 << std::endl;
-		}
-		else {
-			std::cout << 0 << std::endl;
-		}
+		check(A, B[i], n);
 	}
 
 	return 0;
